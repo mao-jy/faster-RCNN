@@ -12,13 +12,13 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # 可用的gpu块号
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # log等级
 
 EPOCHS = 2
-BATCH_SIZE = 1
+BATCH_SIZE = 1     # 修改BATCH_SIZE需要同时修改detection/datasets/data_generator.py
 LEARNING_RATE = 1e-4
 CHECKPOINT = ''  # 是否继续上次训练
 OUTPUT_DIR = 'weights'  # 权重文件保存路径
-SAVE_INTERVAL = 1  # 多少个batch保存一次权重文件
-PRINT_INTERVAL = 1  # 多少个batch打印一次loss信息
-VALIDATE_INTERVAL = 2  # 多少个batch进行一次验证
+SAVE_INTERVAL = 500  # 多少个batch保存一次权重文件
+PRINT_INTERVAL = 10  # 多少个batch打印一次loss信息
+VALIDATE_INTERVAL = 500  # 多少个batch进行一次验证
 
 tf.random.set_seed(22)
 np.random.seed(22)
