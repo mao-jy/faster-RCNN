@@ -126,7 +126,3 @@ for epoch in range(EPOCHS):
                 cocoEval.evaluate()
                 cocoEval.accumulate()
                 cocoEval.summarize()
-
-                content = 'fsfdss' \
-                          'f'
-
